@@ -1,8 +1,10 @@
 name: Main
 
 on:
-  push: [main]
-  pull-request: [main]
+  push:
+    branches: [main]
+  pull-request:
+    branches: [main]
 
 jobs:
   expolore-github-actions:
