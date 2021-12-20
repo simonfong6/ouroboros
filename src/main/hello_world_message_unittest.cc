@@ -1,9 +1,9 @@
-#include <iostream>
+#include "main/hello_world_message.h"
 
-using std::cout;
-using std::endl;
+#include <gtest/gtest.h>
 
-int main() {
-    cout << "Hello World!!!" << endl;
-    return 0;
+
+TEST(HelloWorldMessage, HelloWorldMesssageFunc) {
+    // Test the message is correct.
+    EXPECT_EQ("Hello World!!!", hello_world_message());
 }

@@ -7,10 +7,10 @@ Possibly a snake game?
 # How to Run
 In `src/`
 ```bash
-bazel build //main:hello-world
+bazel build //main:hello_world
 ```
 # Test
 In `src/`
 ```bash
-bazel test --test_output=all //test:hello_test
+bazel test --test_output=all //main:hello_world_message_unittest
 ```

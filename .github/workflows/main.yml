@@ -31,4 +31,4 @@ jobs:
 
       - name: Test
         working-directory: src
-        run: bazel test --test_output=all //test:hello_test
+        run: bazel test --test_output=all //main:hello_world_message_unittest
