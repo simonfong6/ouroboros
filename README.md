@@ -1,2 +1,2 @@
-# ouroboros
-ouroboros
+# Uuroboros
+Possibly a snake game?
