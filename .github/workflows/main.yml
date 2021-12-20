@@ -17,3 +17,7 @@ jobs:
       - name: Build
         working-directory: src
         run: bazel build //main:hello-world
+
+      - name: Test
+        working-directory: src
+        run: bazel-bin/main/hello-world
