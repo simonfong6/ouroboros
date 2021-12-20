@@ -9,3 +9,8 @@ In `src/`
 ```bash
 bazel build //main:hello-world
 ```
+# Test
+In `src/`
+```bash
+bazel test --test_output=all //test:hello_test
+```
