@@ -40,4 +40,4 @@ RUN git clone https://github.com/bazelbuild/buildtools.git && \
     cp bazel-bin/buildifier/buildifier_/buildifier /usr/local/bin/
 
 # Clean up artifacts in build directory.
-# RUN rm -rf /build
+RUN rm -rf /build
