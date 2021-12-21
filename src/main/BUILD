@@ -5,8 +5,8 @@ cc_test(
     size = "small",
     srcs = ["hello_world_message_unittest.cc"],
     deps = [
+        ":hello_world_message",
         "@com_google_googletest//:gtest_main",
-        ":hello_world_message"
     ],
 )
 
