@@ -18,9 +18,9 @@ jobs:
         working-directory: src
         run: bazel build //main:hello_world
 
-      - name: Test
+      - name: Run
         working-directory: src
-        run: bazel-bin/main/hello_world
+        run: bazel run //main:hello_world
 
   test:
     runs-on: ubuntu-latest
