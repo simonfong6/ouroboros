@@ -32,3 +32,13 @@ jobs:
       - name: Test
         working-directory: src
         run: bazel test --test_output=all //main:hello_world_message_unittest
+
+  lint:
+    runs-on: ubuntu-latest
+    container: simonfong6/build-container:1
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Lint
+        run: buildifier --lint=warn --mode=check -r .
