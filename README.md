@@ -21,3 +21,8 @@ In `src/`
 ```bash
 bazel test --test_output=all //main:hello_world_message_unittest
 ```
+
+# Build Container
+```bash
+docker-compose -f build-container/docker-compose.yml run build-container
+```
