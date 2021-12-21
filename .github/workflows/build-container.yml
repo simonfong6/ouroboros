@@ -1,0 +1,45 @@
+---
+name: Build Container
+
+# yamllint disable-line rule:truthy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: simonfong6/build-container:1
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: wget
+        run: wget --version
+
+      - name: git
+        run: git --version
+
+      - name: python
+        run: python3 --version
+
+      - name: pip
+        run: pip3 --version
+
+      - name: pip
+        run: pip3 --version
+
+      - name: bazel
+        run: bazel --version
+
+      - name: buildifier
+        run: buildifier --version
+
+      - name: go
+        run: go version
+      
+      - name: yamllint
+        run: yamllint --version

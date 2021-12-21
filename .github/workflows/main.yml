@@ -1,4 +1,7 @@
+---
 name: Build
+
+# yamllint disable-line rule:truthy
 
 on:
   push:
@@ -40,5 +43,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Lint
+      - name: Bazel
         run: buildifier --lint=warn --mode=check -r .
+
+      - name: Yaml
+        run: yamllint --strict .
