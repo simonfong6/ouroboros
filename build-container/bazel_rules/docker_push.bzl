@@ -8,7 +8,7 @@ def docker_push(name, registry, repository, tag, **kwargs):
 
     return expand_template(
         name = name,
-        template = "docker_push.sh.j2",
+        template = "//bazel_rules:docker_push.sh.j2",
         substitutions = {
             "{{ docker_image }}": docker_image,
         },
