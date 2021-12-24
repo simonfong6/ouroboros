@@ -41,3 +41,6 @@ jobs:
 
       - name: yamllint
         run: yamllint --version
+
+      - name: clang-format
+        run: clang-format --version
