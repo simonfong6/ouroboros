@@ -51,4 +51,5 @@ jobs:
       
       - name: C++
         if: ${{ always() }}
-        run: clang-format --dry-run --Werror **/*.cc **/*.h
+        # Collect all .h and .cc files recursively and check their format.
+        run: find . -iname *.h -o -iname *.cc | xargs clang-format-10 --dry-run --Werror
