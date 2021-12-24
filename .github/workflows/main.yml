@@ -42,10 +42,13 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Bazel
+        if: ${{ always() }}
         run: buildifier --lint=warn --mode=check -r .
 
       - name: Yaml
+        if: ${{ always() }}
         run: yamllint --format parsable --strict .
       
       - name: C++
+        if: ${{ always() }}
         run: clang-format --dry-run --Werror **/*.cc **/*.h
