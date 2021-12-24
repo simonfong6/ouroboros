@@ -1,10 +1,13 @@
+"""Macro for generating a docker push script.
+"""
+
 load(":expand_template.bzl", "expand_template")
 
 def docker_push(name, registry, repository, tag, **kwargs):
     """Push the given docker image.
     """
     docker_image = "{registry}/{repository}:{tag}".format(registry = registry, repository = repository, tag = tag)
-    out_name = docker_image.replace(":", "_").replace('/', '-')
+    out_name = docker_image.replace(":", "_").replace("/", "-")
 
     return expand_template(
         name = name,
