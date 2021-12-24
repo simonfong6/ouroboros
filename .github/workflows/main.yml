@@ -46,3 +46,6 @@ jobs:
 
       - name: Yaml
         run: yamllint --format parsable --strict .
+      
+      - name: C++
+        run: clang-format --dry-run --Werror **/*.cc **/*.h

@@ -9,6 +9,7 @@ WORKDIR /build
 # build-essential: gcc for building with bazel.
 # python3: Install latest yamllint.
 # python3-pip: Install latest yamllint.
+# clang-format: Format and lint c++ code.
 RUN apt update -y && \
     apt upgrade -y && \
     apt install -y \
@@ -16,7 +17,8 @@ RUN apt update -y && \
     git \
     build-essential \
     python3 \
-    python3-pip
+    python3-pip \
+    clang-format
 
 # Install bazel via bazelisk.
 # https://github.com/bazelbuild/bazelisk/blob/master/README.md
