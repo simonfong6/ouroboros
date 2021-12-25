@@ -27,9 +27,6 @@ jobs:
       - name: pip
         run: pip3 --version
 
-      - name: pip
-        run: pip3 --version
-
       - name: bazel
         run: bazel --version
 
