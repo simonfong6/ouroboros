@@ -1,0 +1,11 @@
+---
+version: "3.8"
+
+services:
+  bazel-remote-cache:
+    # https://github.com/buchgr/bazel-remote#docker
+    container_name: bazel-remote-cache
+    image: docker.io/buchgr/bazel-remote-cache:v2.3.1
+    ports:
+      - 9090:8080
+      - 9092:9092
