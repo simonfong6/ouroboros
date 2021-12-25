@@ -35,6 +35,13 @@ RUN wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz && \
     rm -rf /usr/local/go && \
     tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
 
+# Install hadolint to lint Dockerfile.
+# https://github.com/hadolint/hadolint
+RUN wget \
+    https://github.com/hadolint/hadolint/releases/download/v2.8.0/hadolint-Linux-x86_64 \
+    -O /usr/local/bin/hadolint && \
+    chmod +x /usr/local/bin/hadolint
+
 # Add go to the path.
 ENV PATH=$PATH:/usr/local/go/bin
 
