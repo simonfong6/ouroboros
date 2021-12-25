@@ -1,0 +1,56 @@
+---
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: simonfong6/build-container:1
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: bazel build //src/main:hello_world
+
+      - name: Run
+        run: bazel run //src/main:hello_world
+
+  test:
+    runs-on: ubuntu-latest
+    container: simonfong6/build-container:1
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Test
+        run: bazel test --test_output=all //src/main:hello_world_message_unittest
+
+  lint:
+    runs-on: ubuntu-latest
+    container: simonfong6/build-container:1
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Bazel
+        if: ${{ always() }}
+        run: buildifier --lint=warn --mode=check -r .
+
+      - name: Yaml
+        if: ${{ always() }}
+        run: yamllint --format parsable --strict .
+      
+      - name: C++
+        if: ${{ always() }}
+        # Collect all .h and .cc files recursively and check their format.
+        run: find . -iname *.h -o -iname *.cc | xargs clang-format-10 --dry-run --Werror
+
+      - name: Dockerfile
+        if: ${{ always() }}
+        run: hadolint */Dockerfile
