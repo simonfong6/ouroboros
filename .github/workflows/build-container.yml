@@ -44,3 +44,6 @@ jobs:
 
       - name: clang-format-10
         run: clang-format-10 --version
+
+      - name: hadolint
+        run: hadolint --version

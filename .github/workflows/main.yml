@@ -53,3 +53,7 @@ jobs:
         if: ${{ always() }}
         # Collect all .h and .cc files recursively and check their format.
         run: find . -iname *.h -o -iname *.cc | xargs clang-format-10 --dry-run --Werror
+
+      - name: Dockerfile
+        if: ${{ always() }}
+        run: hadolint */Dockerfile
