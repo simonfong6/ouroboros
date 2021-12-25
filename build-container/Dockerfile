@@ -56,11 +56,13 @@ ENV PATH=$PATH:/usr/local/go/bin
 
 # Install buildifier.
 # https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md
+# Ignoring warning about `cd` since there is no good workaround without adding
+# another layer.
+# hadolint ignore=DL3003
 RUN git clone https://github.com/bazelbuild/buildtools.git && \
-    bazel build \
-        --package_path buildtools \
-        //buildifier && \
-    cp buildtools/bazel-bin/buildifier/buildifier_/buildifier /usr/local/bin/
+    (cd buildtools && bazel build //buildifier) && \ 
+    cp buildtools/bazel-bin/buildifier/buildifier_/buildifier /usr/local/bin/ && \
+    rm -rf buildtools
 
 # Install yamllint.
 # https://yamllint.readthedocs.io/en/v1.26.3/quickstart.html
