@@ -16,12 +16,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build
-        working-directory: src
-        run: bazel build //main:hello_world
+        run: bazel build //src/main:hello_world
 
       - name: Run
-        working-directory: src
-        run: bazel run //main:hello_world
+        run: bazel run //src/main:hello_world
 
   test:
     runs-on: ubuntu-latest
@@ -32,7 +30,7 @@ jobs:
 
       - name: Test
         working-directory: src
-        run: bazel test --test_output=all //main:hello_world_message_unittest
+        run: bazel test --test_output=all //src/main:hello_world_message_unittest
 
   lint:
     runs-on: ubuntu-latest

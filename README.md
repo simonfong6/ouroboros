@@ -5,21 +5,24 @@ Possibly a snake game?
 - [Bazel](https://docs.bazel.build/versions/main/install.html)
 
 # Build
-In `src/`
 ```bash
-bazel build //main:hello_world
+bazel build //src/main:hello_world
 ```
 
 # Run
-In `src/`
+## Bazel Run
 ```bash
-bazel-bin/main/hello_world
+bazel run //src/main:hello_world
+```
+
+## Binary
+```bash
+bazel-bin/src/main/hello_world
 ```
 
 # Test
-In `src/`
 ```bash
-bazel test --test_output=all //main:hello_world_message_unittest
+bazel test --test_output=all //src/main:hello_world_message_unittest
 ```
 
 # Build Container

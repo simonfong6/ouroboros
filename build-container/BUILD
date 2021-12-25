@@ -1,4 +1,4 @@
-load("//bazel_rules:docker_push.bzl", "docker_push")
+load("//build-container/bazel_rules:docker_push.bzl", "docker_push")
 
 docker_push(
     name = "docker_push",

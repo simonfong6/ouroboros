@@ -1,5 +1,5 @@
-#ifndef MAIN_HELLO_MESSAGE_H_
-#define MAIN_HELLO_MESSAGE_H_
+#ifndef SRC_MAIN_HELLO_MESSAGE_H_
+#define SRC_MAIN_HELLO_MESSAGE_H_
 
 #include <iostream>
 
