@@ -1,8 +1,8 @@
 #ifndef SRC_OPENGL_HELLOWORLD_HELLO_LIB_H
 #define SRC_OPENGL_HELLOWORLD_HELLO_LIB_H
 
-#include <string>
 #include <memory>
+#include <string>
 
 namespace hello {
 
