@@ -35,6 +35,10 @@ You will *need* to restart the computer for this to take effect.
 ```bash
 xhost + 127.0.0.1
 ```
+```bash
+
+127.0.0.1 being added to access control list
+```
 
 ## Docker Container Display
 Set the following in your docker container.
