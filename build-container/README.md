@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - OpenGL
 - GLUT
 - python3-setup-tools
+- ncurses
 
 ## [1] - 2021-12-24
 ### Added

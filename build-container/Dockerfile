@@ -30,6 +30,9 @@ RUN apt-get update -y && \
         libglu1-mesa-dev=9.0.0-2.1build1 \
         freeglut3-dev=2.8.1-3 \
         mesa-common-dev=20.0.8-0ubuntu1~18.04.1 \
+        libncurses5-dev=6.1-1ubuntu1.18.04 \
+        libncursesw5-dev=6.1-1ubuntu1.18.04 \
+        libgpm-dev=1.20.7-5 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
