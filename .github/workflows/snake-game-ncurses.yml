@@ -1,0 +1,19 @@
+---
+name: Snake Game Ncurses
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: simonfong6/build-container:2
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: bazel build //src/snake-game-ncurses:snake

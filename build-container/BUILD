@@ -5,5 +5,5 @@ docker_push(
     executable = True,
     registry = "docker.io",
     repository = "simonfong6/build-container",
-    tag = "1",
+    tag = "2",
 )

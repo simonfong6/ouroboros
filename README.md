@@ -1,5 +1,5 @@
 # Ouroboros
-Possibly a snake game?
+Possibly a snake game, yes.
 
 # Requirements
 - [Bazel](https://docs.bazel.build/versions/main/install.html)

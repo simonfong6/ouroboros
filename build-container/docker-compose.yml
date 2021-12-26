@@ -4,9 +4,11 @@ version: "3.8"
 services:
   build-container:
     container_name: build-container
-    image: docker.io/simonfong6/build-container:1
+    image: docker.io/simonfong6/build-container:2
     build: .
     tty: true
     working_dir: /workspace
     volumes:
       - "${PWD}:/workspace"
+    environment:
+      - DISPLAY=host.docker.internal:0
