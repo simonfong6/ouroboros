@@ -18,7 +18,7 @@ WORKDIR /build
 # mesa-common-dev: OpenGL + GLUT
 # libncurses5-dev: ncurses for snake.
 # libncursesw5-dev: ncurses for snake.
-# libgpm-dev: Static compilation for ncurses.
+# libgpm-dev: Static compilation for ncurses. (https://stackoverflow.com/questions/49453428/how-to-satisfy-dependencies-for-static-compilation-of-dialog-tool-for-32-bit)
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y \
