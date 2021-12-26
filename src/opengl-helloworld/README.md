@@ -31,6 +31,11 @@ defaults write org.xquartz.X11  enable_iglx -bool true
 ```
 You will *need* to restart the computer for this to take effect.
 
+## Allow connections to Xquartz
+```bash
+xhost + 127.0.0.1
+```
+
 ## Docker Container Display
 Set the following in your docker container.
 ```bash
