@@ -1,3 +1,8 @@
+/*
+Code from:
+- https://www.badprog.com/c-opengl-hello-world
+- https://github.com/bazelbuild/bazel/issues/85
+*/
 #ifdef __APPLE__
 /* Defined before OpenGL and GLUT includes to avoid deprecation messages
 https://stackoverflow.com/questions/53562228/silencing-opengl-warnings-on-macos-mojave/55644380
