@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: simonfong6/build-container:1
+    container: simonfong6/build-container:2
 
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    container: simonfong6/build-container:1
+    container: simonfong6/build-container:2
 
     steps:
       - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    container: simonfong6/build-container:1
+    container: simonfong6/build-container:2
 
     steps:
       - uses: actions/checkout@v2

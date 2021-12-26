@@ -11,7 +11,11 @@ WORKDIR /build
 # build-essential: gcc for building with bazel.
 # python3: Install latest yamllint.
 # python3-pip: Install latest yamllint.
+# python3-setuptools: Install python packages tooling. (https://stackoverflow.com/questions/14426491/python-3-importerror-no-module-named-setuptools)
 # clang-format-10: Format and lint c++ code.
+# libglu1-mesa-dev: OpenGL + GLUT (http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/)
+# freeglut3-dev: OpenGL + GLUT
+# mesa-common-dev: OpenGL + GLUT
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y \
@@ -21,7 +25,11 @@ RUN apt-get update -y && \
         build-essential=12.4ubuntu1 \
         python3=3.6.7-1~18.04 \
         python3-pip=9.0.1-2.3~ubuntu1.18.04.5 \
+        python3-setuptools=39.0.1-2 \
         clang-format-10=1:10.0.0-4ubuntu1~18.04.2 \
+        libglu1-mesa-dev=9.0.0-2.1build1 \
+        freeglut3-dev=2.8.1-3 \
+        mesa-common-dev=20.0.8-0ubuntu1~18.04.1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
