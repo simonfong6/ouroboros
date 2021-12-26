@@ -33,7 +33,6 @@
 
 # Bazel
 bazel-*
-.bazelrc
 
 # VSCode
 .vscode
