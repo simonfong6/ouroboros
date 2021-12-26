@@ -16,6 +16,9 @@ WORKDIR /build
 # libglu1-mesa-dev: OpenGL + GLUT (http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/)
 # freeglut3-dev: OpenGL + GLUT
 # mesa-common-dev: OpenGL + GLUT
+# libncurses5-dev: ncurses for snake.
+# libncursesw5-dev: ncurses for snake.
+# libgpm-dev: Static compilation for ncurses.
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y \
