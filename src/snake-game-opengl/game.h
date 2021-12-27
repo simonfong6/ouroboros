@@ -7,9 +7,9 @@
 #define DOWN -1
 #define LEFT -2
 
-void initGrid(int,int);
+void initGrid(int, int);
 void draw_grid();
 void draw_food();
 void draw_snake();
 
-#endif // GAME_H_INCLUDED
+#endif  // GAME_H_INCLUDED
