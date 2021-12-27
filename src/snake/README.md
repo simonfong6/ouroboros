@@ -10,3 +10,4 @@ bazel build //src/snake:main
 ```bash
 bazel run //src/snake:main
 ```
+
