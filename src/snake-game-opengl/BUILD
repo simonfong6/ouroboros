@@ -11,7 +11,6 @@ config_setting(
     constraint_values = ["@bazel_tools//platforms:linux"],
 )
 
-
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
