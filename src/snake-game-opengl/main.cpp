@@ -91,7 +91,7 @@ void reshape_callback(int w, int h)
 void timer_callback(int)
 {
     glutPostRedisplay();
-    glutTimerFunc(200,timer_callback,0);
+    glutTimerFunc(100,timer_callback,0);
 }
 void input_callback(int key,int x,int y)
 {
