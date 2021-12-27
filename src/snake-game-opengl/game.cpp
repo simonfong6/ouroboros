@@ -80,6 +80,7 @@ void draw_snake()
                 if(length<=MAX)
                     length_inc=true;
                 if(length==MAX)
+                    // MessageBox is only available on Windows, deferring to stdout.
                     // MessageBox(NULL,"You Win\nYou can still keep playing but the snake will not grow.","Awsome",0);
                     std::cout << "You Win\nYou can still keep playing but the snake will not grow." << "Awsome" << std::endl;
             }
