@@ -1,5 +1,5 @@
 ---
-name: Snake Game Ncurses
+name: Snake Game OpenGL
 
 on:
   push:
